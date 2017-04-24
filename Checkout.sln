@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4DBEAD57-E4A8-42D0-8E67-D7B41D0C7C50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{107169C5-280A-400E-93A5-9B4B7C7AB932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout.Interfaces", "Checkout.Interfaces\Checkout.Interfaces.csproj", "{ABC8A378-E1B0-47F6-82BD-187E1D86EC4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABC8A378-E1B0-47F6-82BD-187E1D86EC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC8A378-E1B0-47F6-82BD-187E1D86EC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC8A378-E1B0-47F6-82BD-187E1D86EC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC8A378-E1B0-47F6-82BD-187E1D86EC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ABC8A378-E1B0-47F6-82BD-187E1D86EC4C} = {4DBEAD57-E4A8-42D0-8E67-D7B41D0C7C50}
+	EndGlobalSection
+EndGlobal
