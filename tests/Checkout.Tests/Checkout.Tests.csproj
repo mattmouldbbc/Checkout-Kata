@@ -56,7 +56,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BasketTest.cs" />
+    <Compile Include="ItemTest.cs" />
+    <Compile Include="MultiBuyDiscountTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Checkout.Domain\Checkout.Domain.csproj">
+      <Project>{819d314e-aeb4-4fcd-aa98-b3363ebebcd5}</Project>
+      <Name>Checkout.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Checkout.Interfaces\Checkout.Interfaces.csproj">
+      <Project>{abc8a378-e1b0-47f6-82bd-187e1d86ec4c}</Project>
+      <Name>Checkout.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -42,7 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basket.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="MultiBuyDiscount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Checkout.Interfaces\Checkout.Interfaces.csproj">
+      <Project>{abc8a378-e1b0-47f6-82bd-187e1d86ec4c}</Project>
+      <Name>Checkout.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
