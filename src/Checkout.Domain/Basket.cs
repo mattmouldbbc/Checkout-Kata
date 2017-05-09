@@ -7,7 +7,16 @@ namespace Checkout.Domain
 {
     public class Basket : IBasket
     {
-        private List<IItem> _Items = new List<IItem>();
+        private List<IItem> _items = new List<IItem>();
+        private ICarrierBagProvider _carrierBagProvider;
+
+        public Basket(ICarrierBagProvider carrierBagProvider)
+        {
+            if (carrierBagProvider == null)
+                throw new ArgumentNullException(nameof(carrierBagProvider));
+
+            _carrierBagProvider = carrierBagProvider;
+        }
 
         /// <summary>
         /// Scan a new item and add it to the shopping basket
@@ -18,7 +27,7 @@ namespace Checkout.Domain
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
 
-            _Items.Add(item);
+            _items.Add(item);
         }
 
         /// <summary>
@@ -27,18 +36,20 @@ namespace Checkout.Domain
         /// <returns>Total price of all items including discount</returns>
         public int GetTotalPrice()
         {
-            var basketTotal = _Items.Sum(i => i.UnitPrice);
+            var basketTotal = _items.Sum(i => i.UnitPrice);
 
             // Deduct any discounts from the sum total
-            var discountedSkus = _Items.Where(i => i.Discount != null).Select(i => i.SKU).Distinct();
+            var discountedSkus = _items.Where(i => i.Discount != null).Select(i => i.SKU).Distinct();
             foreach (char sku in discountedSkus)
             {
-                var skuItems = _Items.Where(item => item.SKU == sku);
+                var skuItems = _items.Where(item => item.SKU == sku);
                 if (skuItems.Any())
                 {
                     basketTotal -= skuItems.First().Discount.CalculateDiscount(skuItems);
                 }
             }
+
+            basketTotal += _carrierBagProvider.CalculateTotalBagCharge(_items.Count);
 
             return basketTotal;
         }

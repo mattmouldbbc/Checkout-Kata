@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBasket.cs" />
+    <Compile Include="ICarrierBagProvider.cs" />
     <Compile Include="IDiscount.cs" />
     <Compile Include="IItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

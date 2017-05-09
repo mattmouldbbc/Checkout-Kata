@@ -80,7 +80,7 @@ namespace Checkout.Tests
             basket.Scan(cherry);
             basket.Scan(melon);
 
-            Assert.AreEqual(215, basket.GetTotalPrice());
+            Assert.AreEqual(220, basket.GetTotalPrice());
         }
     }
 }
