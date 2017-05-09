@@ -7,11 +7,13 @@ namespace Checkout.Tests
     [TestClass]
     public class BasketTest
     {
+        private UkCarrierBagProvider carrierBagProvider = new UkCarrierBagProvider();
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void WhenNullItemScanned_ExceptionThrown()
         {
-            var basket = new Basket();
+            var basket = new Basket(UKCarrierBagProvider);
             basket.Scan(null);
         }
 
