@@ -1,13 +1,13 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Checkout.Domain;
 
 namespace Checkout.Tests
 {
-    private WalesCarrierBagProvider carrierBagProvider = new WalesCarrierBagProvider();
-
     [TestClass]
     public class WalesCarrierBagTest
     {
+        private WalesCarrierBagProvider carrierBagProvider = new WalesCarrierBagProvider();
+
         [TestMethod]
         public void WhenNoItemsScanned_NoBagChargeApplied()
         {

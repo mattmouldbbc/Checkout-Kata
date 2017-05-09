@@ -51,7 +51,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -60,6 +62,8 @@
     <Compile Include="ItemTest.cs" />
     <Compile Include="MultiBuyDiscountTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UKCarrierBagTest.cs" />
+    <Compile Include="WalesCarrierBagTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Checkout.Domain\Checkout.Domain.csproj">

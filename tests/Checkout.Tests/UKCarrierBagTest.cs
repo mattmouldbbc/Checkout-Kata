@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Checkout.Domain;
 
 namespace Checkout.Tests
@@ -7,7 +6,7 @@ namespace Checkout.Tests
     [TestClass]
     public class UKCarrierBagTest
     {
-        private UkCarrierBagProvider carrierBagProvider = new UkCarrierBagProvider();
+        private UKCarrierBagProvider carrierBagProvider = new UKCarrierBagProvider();
 
         [TestMethod]
         public void WhenNoItemsScanned_NoBagChargeApplied()
