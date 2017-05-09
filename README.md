@@ -22,3 +22,11 @@ interface ICheckout
     int GetTotalPrice();
 }
 ```
+
+## Additional requirement
+
+The UK government has introduced a carrier bag charge at all checkouts. For ease of implementation assume that all items must be bagged when scanned at the checkout.
+
+Each carrier bag can hold a maximum of 5 items.
+
+All carrier bags are charged at the price of 5 per bag, except in Wales where bags will be charged at 10.
